@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;background:#fff;min-width:1200px}td,th
 <button class="green" onclick="addBoard()">إضافة عضو</button>
 <button class="blue" onclick="printBoardPDF()">طباعة PDF - مجلس الإدارة</button>
 <div class="smallScroll" id="boardList"></div></div>
-<div class="logoBox2"><img src="letterhead.jpg" style="width:100%;height:140px;object-fit:cover;object-position:bottom;" alt="Thank You"></div>
+<div class="logoBox2" style="text-align:center;font-weight:bold;font-size:22px;padding:15px;">شكراً لكم - Thank You</div>
 function exportBackup(){var data={emps:emps,invs:invs,acc:acc,board:board};var b=new Blob([JSON.stringify(data)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='Abodomat_Backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();}
 function importBackup(ev){var f=ev.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var d=JSON.parse(r.result);if(!d.emps&&!d.invs){alert('الملف ما نسخة احتياطية');return;}if(!confirm('استبدال كل البيانات؟'))return;emps=d.emps||[];invs=d.invs||[];acc=d.acc||{capital:0,exp:0,exps:[],revs:[]};board=d.board||[];if(!acc.exps)acc.exps=[];if(!acc.revs)acc.revs=[];saveAll();showEmps();showInvs();showAcc();alert('تم الاستيراد');}catch(e){alert('الملف تالف');}};r.readAsText(f);ev.target.value='';}
 var MONTHS_AR=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
