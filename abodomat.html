@@ -33,7 +33,7 @@ table{width:100%;border-collapse:collapse;background:#fff;min-width:1200px}td,th
 .expBox{border:2px solid #ef6c00;border-radius:10px;padding:12px;margin:12px 0;background:#fff3e0}
 @media print{.noPrint{display:none!important}body{background-image:url('letterhead.jpg');background-size:100% 100%;background-repeat:no-repeat;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:0}}</style>
 </head>
-<div class="logoBox2"><img src="logo2.jpg" alt="شعار الشركة"></div>
+<div id="appContent"><div class="logoBox"><img src="logo1.jpg" alt="شعار الشركة"></div>
 <div class="backupBar noPrint"><button class="green" onclick="exportBackup()">تصدير نسخة احتياطية</button><button class="orange" onclick="document.getElementById('importFile').click()">استيراد نسخة احتياطية</button><input type="file" id="importFile" accept=".json" style="display:none" onchange="importBackup(event)"></div>
 <div class="tabs noPrint"><button onclick="showTab('emp')">الموظفين</button><button onclick="showTab('inv')">الفواتير</button><button onclick="showTab('acc')">الحسابات</button><button onclick="showTab('board')">مجلس الإدارة</button></div>
 <div id="tab-emp" class="card"><div id="empMain"><div class="searchFileBox noPrint"><h2>ملف الموظف</h2><label>اكتب اسم الموظف لفتح ملفو</label><input id="empFileSearch" oninput="searchEmpFile()" placeholder="مثال: محمد عبدالله ..."><div id="empFileSearchResult"></div></div>
