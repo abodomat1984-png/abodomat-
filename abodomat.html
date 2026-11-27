@@ -100,7 +100,7 @@ table{width:100%;border-collapse:collapse;background:#fff;min-width:1200px}td,th
 <button class="blue" onclick="printBoardPDF()">طباعة PDF - مجلس الإدارة</button>
 <div class="smallScroll" id="boardList"></div></div>
 
-<div class="logoBox2"><img src="logo2.jpg" alt="شكراً لكم - Thank You" style="width:100%;max-width:650px;border-radius:10px"></div>
+<div class="logoBox2"><img src="logo2.jpg" alt="شكراً لكم - Thank You"></div>
   </div>
      <script> 
 function exportBackup(){var data={emps:emps,invs:invs,acc:acc,board:board};var b=new Blob([JSON.stringify(data)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='Abodomat_Backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();}
