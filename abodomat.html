@@ -224,7 +224,7 @@ function printInv(i){var v=invs[i];var rows=v.items.map(function(x,j){return '<t
 function printAllInvsPDF(){if(!invs.length){alert('ما في فواتير');return;}var rows=invs.map(function(v,i){return '<tr><td>'+(i+1)+'</td><td>'+v.client+'</td><td>'+v.country+' / '+(v.state||'')+' / '+(v.city||'')+'</td><td>'+v.phone+'</td><td>'+v.date+'</td><td>'+(v.invType||'فاتورة نهائية')+'</td><td>'+v.items.map(function(x){return x.service+' ('+x.qty+' × '+x.price+')';}).join(' - ')+'</td><td>'+v.total+'</td></tr>';}).join('');var total=invs.reduce(function(s,v){return s+Number(v.total||0);},0);var body='<p><b>عدد الفواتير:</b> '+invs.length+' | <b>الإجمالي:</b> '+total+'</p><table><tr><th>م</th><th>العميل</th><th>العنوان</th><th>الجوال</th><th>التاريخ</th><th>النوع</th><th>الخدمات</th><th>الإجمالي</th></tr>'+rows+'</table>';printLetterHead('كشف الفواتير',body);}
 function printAccPDF(){var el=document.getElementById('accReport');if(!el)return;var body=el.innerHTML;printLetterHead('تقرير الحسابات',body);}
 buildDatePicker('eIdIssue','');buildDatePicker('eIdExpiry','');buildDatePicker('eHireDate','');buildDatePicker('iDate',new Date().toISOString().slice(0,10));buildDatePicker('expDate',new Date().toISOString().slice(0,10));buildDatePicker('revDate',new Date().toISOString().slice(0,10));buildDatePicker('bDate','');
-initEmpStates();initCountries();initServices();showEmps();showInvs();showAcc();showBoard();checkExpiry();showTab('emp');
+initEmpStates();initCountries();initServices();showEmps();showInvs();showAcc();showBoard();checkExpiry();
 </script>
 </body>
 </html>
