@@ -6,38 +6,46 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>أبودومات - إدارة أعمال</title>
 <style>
-body{font-family:Arial;background:#eaf6fb;margin:0;padding:10px;direction:rtl;text-align:right;font-size:22px}
-*{font-size:20px !important;line-height:1.7 !important}
-input,select,button,textarea{font-size:20px !important;padding:14px !important;min-height:50px !important}
-table,td,th{font-size:19px !important}
-h1,h2{font-size:28px !important}
-*{box-sizing:border-box !important}
-body{overflow-x:hidden !important;width:100% !important;margin:0 !important;padding:10px !important}
+<style>
+body{font-family:Arial;background:#eaf6fb;margin:0;padding:10px;direction:rtl;text-align:right;font-size:16px}
+*{box-sizing:border-box !important;max-width:100%}
+*{font-size:16px !important;line-height:1.6 !important}
+input,select,button,textarea{font-size:16px !important;padding:10px !important;min-height:44px !important;width:100%}
+table,td,th{font-size:15px !important}
+h1,h2{font-size:22px !important}
+body{overflow-x:hidden !important;width:100% !important}
 table{width:100% !important;display:block !important;overflow-x:auto !important}
-table{width:100% !important;display:block !important;overflow-x:auto !important}
-
-}button.red{background:#b00020}table{width:100%;border-collapse:collapse;background:#fff;min-width:1200px}td,th{border:1px solid #999;padding:6px;text-align:center;white-space:nowrap}
-.scroll{overflow-x:auto;border:1px solid #999}.tabs{display:flex;gap:6px;flex-wrap:wrap}.tabs button{width:auto;padding:8px 14px}
-.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:15px}th,td{border:1px solid #ccc;padding:8px;text-align:right}th{background:#eee}
-.phoneRow{display:flex;gap:6px}.phoneRow .fixedCode{background:#e6f3f8;font-weight:bold;text-align:center;width:30%;border:1px solid #0e7a9e;border-radius:6px;padding:9px}.phoneRow input{width:70%}
-.dateRow{display:flex;gap:6px}.dateRow select{flex:1}.hint{font-size:13px;color:#555}
-.empPageBox{border:2px solid #0e7a9e;border-radius:10px;padding:12px;background:#eaf6fb;margin-top:10px}
-.fileBox{border:1px solid #999;border-radius:8px;padding:10px;margin:8px 0;background:#fff}
-.searchFileBox{border:2px dashed #0e7a9e;border-radius:10px;padding:10px;margin:10px 0;background:#eaf6fb}
-.smallTable{width:100%;border-collapse:collapse;min-width:900px}.smallTable td,.smallTable th{border:1px solid #999;padding:7px 5px;text-align:center;font-size:14px;white-space:nowrap}
-.smallTable button{width:auto;padding:6px 10px;font-size:13px;margin:2px}.smallScroll{overflow-x:auto;border:1px solid #999;background:#fff;margin:8px 0}
-.logoBox,.logoBox2{text-align:center;background:#fff;border-radius:10px;padding:8px;margin:10px 0}.logoBox img,.logoBox2 img{width:100%;max-width:650px;border-radius:10px}
-.backupBar{background:#fff;border:2px solid #0a4a5e;border-radius:10px;padding:10px;margin:10px 0;display:flex;flex-wrap:wrap;gap:6px}.backupBar button{width:auto;flex:1;min-width:130px;font-size:14px}
-.jumpBar{background:#fff;border:2px solid #ef6c00;border-radius:10px;padding:10px;display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.jumpBar button{width:auto;flex:1;min-width:120px}
-.navRow{display:flex;gap:6px}.navRow button{width:auto;flex:1}
-.profitBox{border:2px solid #0e7a9e;border-radius:8px;padding:10px;margin:6px 0;background:#e6f3f8}
-.profitBox table{width:100%;min-width:0;border-collapse:collapse;background:#fff}
-.profitBox td,.profitBox th{border:1px solid #999;padding:8px;text-align:center}
-.revBox{border:2px solid #2e7d32;border-radius:10px;padding:12px;margin:12px 0;background:#e8f5e9}
-.expBox{border:2px solid #ef6c00;border-radius:10px;padding:12px;margin:12px 0;background:#fff3e0}
-@media print{.noPrint{display:none!important}body{background-image:url('letterhead.jpg');background-size:100% 100%;background-repeat:no-repeat;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:0}}</style>
-</head>
-<div id="appContent"><div class="logoBox"><img src="logo1.jpg" alt="شعار الشركة"></div>
+button{width:100% !important}
+button.red{background:#b00020}
+table{width:100%;border-collapse:collapse;background:#fff}
+.scroll{overflow-x:auto}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{width:auto;padding:10px}
+.phoneRow{display:flex;gap:6px}
+.phoneRow input{flex:1}
+.phoneRow select{flex:1}
+.dateRow{display:flex;gap:6px}
+.dateRow select{flex:1}
+.hint{font-size:13px;color:#555}
+.empPageBox{border:1px solid #ddd;border-radius:10px;padding:10px;margin-top:10px}
+.fileBox{border:1px solid #999;border-radius:8px;padding:10px;margin:0;background:#fff}
+.searchFileBox{border:2px dashed #07a7e8;border-radius:8px;padding:10px;margin:10px 0;background:#eaf6fb}
+.smallTable{width:100%;border-collapse:collapse}
+.smallTable td,.smallTable th{border:1px solid #999;padding:6px;text-align:right}
+.smallTable button{width:auto;padding:6px 10px}
+.logoBox,.logoBox2{text-align:center;background:#fff;border-radius:10px;padding:8px;margin:10px 0}
+.logoBox img,.logoBox2 img{max-width:100%}
+.backupBar{background:#fff;border:1px solid #4da5de;border-radius:10px;padding:10px;margin:10px 0;display:flex;flex-wrap:wrap;gap:6px}
+.jumpBar{background:#fff;border:2px solid #e64a5de;border-radius:10px;padding:10px;display:flex;flex-wrap:wrap;gap:6px}
+.navRow{display:flex;gap:6px;flex-wrap:wrap}
+.navRow button{width:auto;flex:1}
+.profitBox{border:1px solid #ddd;border-radius:10px;padding:10px;margin:10px 0;background:#e6f3f8}
+.profitBox table{width:100%}
+.profitBox td,.profitBox th{border:1px solid #ddd;padding:8px;text-align:center}
+.revBox{border:2px solid #e2e2e2;border-radius:10px;padding:12px;margin:12px 0;background:#8df5e9}
+.expBox{border:2px solid #e2e2e2;border-radius:10px;padding:12px;margin:12px 0;background:#8ff5e0}
+@media print{.noPrint{display:none !important}body{background-image:url('letterhead.jpg');background-size:100% 100%}}
+</style>
 <div class="backupBar noPrint"><button class="green" onclick="exportBackup()">تصدير نسخة احتياطية</button><button class="orange" onclick="document.getElementById('importFile').click()">استيراد نسخة احتياطية</button><input type="file" id="importFile" accept=".json" style="display:none" onchange="importBackup(event)"></div>
 <div class="tabs noPrint"><button onclick="showTab('emp')">الموظفين</button><button onclick="showTab('inv')">الفواتير</button><button onclick="showTab('acc')">الحسابات</button><button onclick="showTab('board')">مجلس الإدارة</button></div>
   <body>
