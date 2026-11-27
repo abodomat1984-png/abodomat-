@@ -34,7 +34,7 @@ table{width:100%;border-collapse:collapse;background:#fff;min-width:1200px}td,th
  <div id="appContent"><div class="logoBox"><img src="logo1.jpg" alt="شعار الشركة"></div> 
 <div class="backupBar noPrint"><button class="green" onclick="exportBackup()">تصدير نسخة احتياطية</button><button class="orange" onclick="document.getElementById('importFile').click()">استيراد نسخة احتياطية</button><input type="file" id="importFile" accept=".json" style="display:none" onchange="importBackup(event)"></div>
 <div class="tabs noPrint"><button onclick="showTab('emp')">الموظفين</button><button onclick="showTab('inv')">الفواتير</button><button onclick="showTab('acc')">الحسابات</button><button onclick="showTab('board')">مجلس الإدارة</button></div>
-  <body>
+  
 <div id="tab-emp" class="card"><div id="empMain"><div class="searchFileBox noPrint"><h2>ملف الموظف</h2><label>اكتب اسم الموظف لفتح ملفو</label><input id="empFileSearch" oninput="searchEmpFile()" placeholder="مثال: محمد عبدالله ..."><div id="empFileSearchResult"></div></div>
 <h2 id="empFormTitle">إضافة موظف - بيانات الجدول</h2>
 <label>الاسم</label><input id="eName">
